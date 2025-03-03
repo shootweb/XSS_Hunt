@@ -30,6 +30,12 @@ sudo mv chromedriver /usr/local/bin/
 ```
 
 ## Usage
+**Full Scan:** Will trigger all functions.
+<br>
+**Extract Parameters:** Needs a URL list, it will trigger parameter grabbing and output the parameters into a list.
+<br>
+**XSS Testing:** Needs a URL with paremeters list and a Payloads list, it will test the Payloads into the parameters.
+<br>
 ### 1. **Full Scan** (Crawl sitemap, extract parameters, and test XSS)
 ```bash
 python script.py full <domain_or_sitemap>
@@ -79,6 +85,7 @@ python script.py xss parameters.txt payloads.txt
 - `xss_results.txt` → URLs tested for XSS vulnerabilities.
 
 ## Example Payload File (`payloads.txt`)
+I reccomend using XSS Hunter, but I'm not the XSS police.
 ```
 <script>alert(1)</script>
 "><img src=x onerror=alert(1)>
