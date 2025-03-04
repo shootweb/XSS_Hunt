@@ -1,6 +1,7 @@
 # XSS Hunt
 
-`XSS Hunt` is a tool for automating the discovery of Cross-Site Scripting (XSS) vulnerabilities. It crawls sitemaps, extracts URL parameters, and injects XSS payloads to identify potential security flaws. The tool combines `requests` for static analysis and `selenium` for JavaScript-heavy pages, allowing comprehensive testing.
+`XSS Hunt` is a tool for automating the discovery of Cross-Site Scripting (XSS) vulnerabilities. It crawls sitemaps, extracts URL parameters, and injects XSS payloads to identify potential security flaws. The tool combines `requests` for static analysis and `selenium` for JavaScript-heavy pages, allowing comprehensive testing. <br>
+It is basically a combination of other scripts I made when studying XSS (<a href="https://github.com/shootweb/Sitemapper">Sitemapper </a>+ <a href="https://github.com/shootweb/Parameter-grabber">Parameter Grabber </a>+ <a href="https://github.com/shootweb/XSSnium">XSSnium</a>).
 
 ## Features
 - **Sitemap Crawling:** Finds and extracts URLs from `sitemap.xml` and `robots.txt`.
@@ -30,7 +31,7 @@ sudo mv chromedriver /usr/local/bin/
 ```
 
 ## Usage
-**Full Scan:** Will trigger all functions.
+**Full Scan:** Will trigger all functions. Intakes a single URL/domain form where it will look for the sitemap and robots.txt.
 <br>
 **Extract Parameters:** Needs a URL list, it will trigger parameter grabbing and output the parameters into a list.
 <br>
@@ -85,7 +86,7 @@ python script.py xss parameters.txt payloads.txt
 - `xss_results.txt` → URLs tested for XSS vulnerabilities.
 
 ## Example Payload File (`payloads.txt`)
-I reccomend using XSS Hunter, but I'm not the XSS police.
+I reccomend using XSS Hunter URL in your payloads, but I'm not the XSS police.
 ```
 <script>alert(1)</script>
 "><img src=x onerror=alert(1)>
@@ -99,6 +100,8 @@ I reccomend using XSS Hunter, but I'm not the XSS police.
 
 ## Disclaimer
 This tool is for **educational and ethical security testing** only. Unauthorized use against systems you do not own is illegal.
+<br>
+Do not use this tool for skidding.
 
 ## License
 MIT License
