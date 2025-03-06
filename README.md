@@ -1,4 +1,4 @@
-# XSS Hunt
+# XSS Hunt V0.1
 
 `XSS Hunt` is a tool for automating the discovery of Cross-Site Scripting (XSS) vulnerabilities. It crawls sitemaps, extracts URL parameters, and injects XSS payloads to identify potential security flaws. The tool combines `requests` for static analysis and `selenium` for JavaScript-heavy pages, allowing comprehensive testing. <br>
 It is basically a combination of other scripts I made when studying XSS (<a href="https://github.com/shootweb/Sitemapper">Sitemapper </a>+ <a href="https://github.com/shootweb/Parameter-grabber">Parameter Grabber </a>+ <a href="https://github.com/shootweb/XSSnium">XSSnium</a>).
@@ -20,14 +20,6 @@ It is basically a combination of other scripts I made when studying XSS (<a href
 ### Installing Dependencies
 ```bash
 pip install -r requirements.txt
-```
-To install `chromedriver`:
-```bash
-sudo apt install google-chrome-stable
-wget https://chromedriver.storage.googleapis.com/LATEST_RELEASE -O chromedriver_version.txt
-wget https://chromedriver.storage.googleapis.com/$(cat chromedriver_version.txt)/chromedriver_linux64.zip
-unzip chromedriver_linux64.zip
-sudo mv chromedriver /usr/local/bin/
 ```
 
 ## Usage
